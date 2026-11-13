@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#686b43">
+  <meta name="description" content="Marolaka Eiffel Majunga : une maison d’exception, des chambres élégantes et un jardin tropical au cœur de Majunga.">
+  <title>Marolaka Eiffel — Majunga</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Marolaka Eiffel — Majunga">
+  <meta property="og:description" content="Une maison d’exception, des chambres élégantes et un jardin tropical au cœur de Majunga.">
+  <meta property="og:locale" content="fr_FR">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- Seule la première photo du diaporama est préchargée (version mobile ou ordinateur selon l'écran) -->
+  <link rel="preload" as="image" href="assets/images/hero-1-piscine-mobile.jpg" media="(max-width: 560px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/hero-1-piscine.jpg" media="(min-width: 561px)" fetchpriority="high">
+
+  <!-- Police manuscrite de « Majunga » (proche de Brush Script MT, identique sur tous les appareils) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yellowtail&amp;display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/config.js" defer></script>
+  <script src="js/booking.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!-- Pictogrammes : copie de assets/icons/icons.svg, intégrée ici pour fonctionner aussi en ouverture directe du fichier -->
+  <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 12h16M4 6h16M4 18h16"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol><symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol><symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol><symbol id="i-calendar-days" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></symbol><symbol id="i-user-round" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol><symbol id="i-users-round" viewBox="0 0 24 24"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></symbol><symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="i-waves-ladder" viewBox="0 0 24 24"><path d="M19 5a2 2 0 0 0-2 2v11"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M7 13h10"/><path d="M7 9h10"/><path d="M9 5a2 2 0 0 0-2 2v11"/></symbol><symbol id="i-bed-double" viewBox="0 0 24 24"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></symbol><symbol id="i-bed-single" viewBox="0 0 24 24"><path d="M3 20v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8"/><path d="M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><path d="M3 18h18"/></symbol><symbol id="i-concierge-bell" viewBox="0 0 24 24"><path d="M3 20a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1Z"/><path d="M20 16a8 8 0 1 0-16 0"/><path d="M12 4v4"/><path d="M10 4h4"/></symbol><symbol id="i-snowflake" viewBox="0 0 24 24"><path d="m10 20-1.25-2.5L6 18"/><path d="M10 4 8.75 6.5 6 6"/><path d="m14 20 1.25-2.5L18 18"/><path d="m14 4 1.25 2.5L18 6"/><path d="m17 21-3-6h-4"/><path d="m17 3-3 6 1.5 3"/><path d="M2 12h6.5L10 9"/><path d="m20 10-1.5 2 1.5 2"/><path d="M22 12h-6.5L14 15"/><path d="m4 10 1.5 2L4 14"/><path d="m7 21 3-6-1.5-3"/><path d="m7 3 3 6h4"/></symbol><symbol id="i-panels-top-left" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></symbol><symbol id="i-coffee" viewBox="0 0 24 24"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></symbol><symbol id="i-wifi" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></symbol><symbol id="i-car-front" viewBox="0 0 24 24"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol><symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol><symbol id="i-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol></svg>
+  <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><symbol id="eiffel" viewBox="0 0 64 108"><g fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"><path d="M32 2v10m-2 0h4l2 27 5 22 6 20 14 24H47c-2-18-8-25-15-25s-13 7-15 25H3l14-24 6-20 5-22 2-27Z"/><path d="M27 39h10M22 61h20M16 80h32M10 92h44M26 61l4-22 2-27 2 27 4 22M21 80l6-19h10l6 19M7 104l13-24m37 24L44 80M17 104c2-20 8-29 15-29s13 9 15 29M22 61l16-22m-12 0 16 22M17 80l25-19m-20 0 25 19M11 92l10-5m32 5-10-5"/><path d="M25 42h14m-18 22h22m-29 19h36M2 105h60"/></g></symbol></defs></svg>
+
+  <!-- ============ En-tête ============ -->
+  <header class="header" id="accueil">
+    <div class="header__inner">
+      <a class="brand" href="#accueil" aria-label="Marolaka Eiffel Majunga, accueil">
+        <img class="brand__logo" src="assets/images/logo-marolaka-eiffel@2x.png" srcset="assets/images/logo-marolaka-eiffel@2x.png 2x, assets/images/logo-marolaka-eiffel@3x.png 3x" width="132" height="88" alt="">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-navigation"><svg class="icon icon--menu" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <nav class="navigation" id="main-navigation" aria-label="Navigation principale">
+        <a class="navigation__link navigation__link--active" href="#accueil" aria-current="page">Accueil</a>
+        <a class="navigation__link" href="#chambres">Chambres</a>
+        <a class="navigation__link" href="#reservation">Réservation</a>
+        <a class="navigation__link" href="#histoire">À propos</a>
+        <a class="navigation__link" href="#services">Services</a>
+        <a class="navigation__link" href="#histoire" data-page="blog">Blog</a>
+        <a class="navigation__link" href="#contact">Contact</a>
+        <a class="button button--small" href="#reservation">Réserver</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ Bannière ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- Diaporama : les photos défilent derrière le texte, qui reste fixe. Photos 2 et 3 chargées après la page (js/main.js). -->
+      <div class="hero__slides" data-hero-slideshow>
+        <picture>
+          <source media="(max-width: 560px)" srcset="assets/images/hero-1-piscine-mobile.jpg">
+          <img class="hero__image hero__slide hero__slide--1 is-active" src="assets/images/hero-1-piscine.jpg" data-placeholder="assets/images/placeholder-hero.svg" alt="La piscine de Marolaka Eiffel bordée de palmiers" fetchpriority="high">
+        </picture>
+        <picture>
+          <source media="(max-width: 560px)" data-srcset="assets/images/hero-2-facade-mobile.jpg">
+          <img class="hero__image hero__slide hero__slide--2" data-src="assets/images/hero-2-facade.jpg" alt="La façade de Marolaka Eiffel et sa piscine au crépuscule">
+        </picture>
+        <picture>
+          <source media="(max-width: 560px)" data-srcset="assets/images/hero-3-jardin-mobile.jpg">
+          <img class="hero__image hero__slide hero__slide--3" data-src="assets/images/hero-3-jardin.jpg" alt="Le jardin tropical, ses fauteuils suspendus et la piscine">
+        </picture>
+      </div>
+      <div class="hero__shade"></div>
+      <div class="hero__content container">
+        <p class="eyebrow hero__eyebrow">Bienvenue à</p>
+        <h1 id="hero-title">MAROLAKA<br>EIFFEL</h1>
+        <p class="hero__signature">Majunga</p>
+        <p class="hero__description">Une maison d’exception inspirée par l’héritage<br class="desktop-break"> de Gustave Eiffel, au cœur de Majunga.<br class="desktop-break"> Confort, élégance et sérénité vous attendent.</p>
+        <a class="button button--hero" href="#histoire">Découvrir l’hôtel</a>
+      </div>
+    </section>
+
+    <!-- ============ Barre de réservation ============ -->
+    <div class="booking-wrapper container" id="reservation">
+      <form class="booking" id="booking-form">
+        <div class="booking__field"><svg class="icon icon--calendar-days" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-calendar-days"/></svg><div class="booking__control"><label for="arrival">Arrivée</label><input class="booking__date" id="arrival" name="arrival" type="date" required><span class="booking__value" data-empty="Sélectionner" aria-hidden="true">Sélectionner</span></div></div>
+        <div class="booking__field"><svg class="icon icon--calendar-days" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-calendar-days"/></svg><div class="booking__control"><label for="departure">Départ</label><input class="booking__date" id="departure" name="departure" type="date" required><span class="booking__value" data-empty="Sélectionner" aria-hidden="true">Sélectionner</span></div></div>
+        <div class="booking__field booking__field--guests"><svg class="icon icon--user-round" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-user-round"/></svg><div><label for="guests">Voyageurs</label><select id="guests" name="guests"><option value="1">1 adulte</option><option value="2" selected>2 adultes</option><option value="3">3 adultes</option><option value="4">4 adultes</option></select></div></div>
+        <button class="button booking__submit" type="submit">Vérifier les disponibilités</button>
+      </form>
+    </div>
+
+    <!-- ============ Histoire ============ -->
+    <section class="story container" id="histoire" aria-labelledby="story-title">
+      <div class="story__content">
+        <p class="eyebrow eyebrow--gold">L’âme de Majunga</p>
+        <h2 id="story-title">Une histoire, une vision,<br>votre séjour.</h2>
+        <p class="story__description">Derrière chaque courbe, chaque ligne, se cache l’héritage d’un génie : Gustave Eiffel. Ici, l’architecture raconte une histoire, celle d’une vision audacieuse et intemporelle.<br>Venez y séjourner, et réécrivez à votre manière un nouveau chapitre de ce lieu hors du commun.</p>
+        <a class="button button--outline" href="#story-detail" id="story-more" aria-expanded="false" aria-controls="story-detail">Découvrir notre histoire</a>
+        <p class="story__detail" id="story-detail" hidden>Au cœur de Majunga, Marolaka Eiffel fait dialoguer l’élégance architecturale et la douceur de vivre malgache. Une maison à découvrir, un lieu où prendre le temps.</p>
+        <svg class="story__tower" aria-hidden="true"><use href="#eiffel"/></svg>
+      </div>
+      <div class="story__gallery">
+        <img class="story__photo story__photo--bedroom photo--facade" src="assets/images/histoire-facade.jpg" data-placeholder="assets/images/placeholder-story-bedroom.svg" alt="La façade de Marolaka Eiffel et ses balcons en fer forgé">
+        <img class="story__photo photo--balcon" src="assets/images/histoire-balcon.jpg" data-placeholder="assets/images/placeholder-story-balcony.svg" alt="Balcon meublé donnant sur le jardin tropical et la piscine" loading="lazy">
+        <img class="story__photo" src="assets/images/histoire-salle-de-bain.jpg" data-placeholder="assets/images/placeholder-story-bathroom.svg" alt="Salle de bain aux meubles en bois" loading="lazy">
+        <img class="story__photo story__photo--pool photo--nuit" src="assets/images/histoire-piscine-nuit.jpg" data-placeholder="assets/images/placeholder-story-pool-night.svg" alt="L’hôtel et sa piscine illuminés à la tombée de la nuit" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ============ Atouts ============ -->
+    <section class="highlights" aria-label="Les atouts de notre hôtel">
+      <div class="highlights__inner container">
+        <article class="highlight"><svg class="icon icon--map-pin" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-map-pin"/></svg><h3>En centre-ville</h3><p>À 5 min du Grand Baobab<br>Majunga</p></article>
+        <article class="highlight"><svg class="icon icon--waves-ladder" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-waves-ladder"/></svg><h3>Piscine &amp; jardin</h3><p>Détendez-vous dans<br>un cadre tropical</p></article>
+        <article class="highlight"><svg class="icon icon--bed-double" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-bed-double"/></svg><h3>Chambres confortables</h3><p>Équipements modernes et<br>ambiance chaleureuse</p></article>
+        <article class="highlight"><svg class="icon icon--concierge-bell" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-concierge-bell"/></svg><h3>Service attentionné</h3><p>Équipe disponible pour rendre<br>votre séjour inoubliable</p></article>
+      </div>
+    </section>
+
+    <!-- ============ Chambres ============ -->
+    <section class="rooms container" id="chambres" aria-labelledby="rooms-title">
+      <div class="rooms__intro"><h2 id="rooms-title">Nos Chambres</h2><p>Des chambres élégantes et confortables pour un séjour relaxant au cœur de Majunga.</p><button class="button button--outline" id="view-rooms" type="button" aria-expanded="false" aria-controls="room-list">Voir toutes les chambres</button></div>
+      <div class="rooms__carousel">
+        <!-- data-room-* : identifiants prévus pour le futur moteur de réservation -->
+        <div class="rooms__list" id="room-list" tabindex="0" aria-label="Liste des chambres">
+          <article class="room-card" data-room-id="standard" data-room-capacity="2" data-room-price="95000"><a class="room-card__image-link" href="#reservation" aria-label="Réserver une chambre standard"><img class="photo--standard" src="assets/images/chambre-standard.jpg" data-placeholder="assets/images/placeholder-room-standard.svg" alt="Chambre Standard avec grand lit et appliques murales" loading="lazy"></a><h3>Chambre Standard</h3><p class="room-card__price">À partir de 95 000 Ar / nuit</p><ul class="room-card__amenities"><li><svg class="icon icon--user-round" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-user-round"/></svg>2 personnes</li><li><svg class="icon icon--bed-single" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-bed-single"/></svg>1 lit</li><li><svg class="icon icon--snowflake" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-snowflake"/></svg>Climatisation</li></ul></article>
+          <article class="room-card" data-room-id="superieure" data-room-capacity="2" data-room-price="130000"><a class="room-card__image-link" href="#reservation" aria-label="Réserver une chambre supérieure"><img class="photo--superieure" src="assets/images/chambre-superieure.jpg" data-placeholder="assets/images/placeholder-room-superior.svg" alt="Chambre Supérieure avec bureau et baie vitrée ouvrant sur le balcon" loading="lazy"></a><h3>Chambre Supérieure</h3><p class="room-card__price">À partir de 130 000 Ar / nuit</p><ul class="room-card__amenities"><li><svg class="icon icon--user-round" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-user-round"/></svg>2 personnes</li><li><svg class="icon icon--bed-single" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-bed-single"/></svg>1 lit</li><li><svg class="icon icon--panels-top-left" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-panels-top-left"/></svg>Balcon</li></ul></article>
+          <article class="room-card" data-room-id="suite-familiale" data-room-capacity="4" data-room-price="180000"><a class="room-card__image-link" href="#reservation" aria-label="Réserver une suite familiale"><img class="photo--suite" src="assets/images/suite-familiale.jpg" data-placeholder="assets/images/placeholder-room-family.svg" alt="Suite Familiale avec grand lit et coin salon" loading="lazy"></a><h3>Suite Familiale</h3><p class="room-card__price">À partir de 180 000 Ar / nuit</p><ul class="room-card__amenities"><li><svg class="icon icon--users-round" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-users-round"/></svg>4 personnes</li><li><svg class="icon icon--bed-single" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-bed-single"/></svg>2 lits</li><li><svg class="icon icon--panels-top-left" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-panels-top-left"/></svg>Salon</li></ul></article>
+        </div>
+        <div class="rooms__arrows"><button type="button" id="rooms-prev" aria-label="Chambre précédente" aria-controls="room-list"><svg class="icon icon--chevron-left" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-left"/></svg></button><button type="button" id="rooms-next" aria-label="Chambre suivante" aria-controls="room-list"><svg class="icon icon--chevron-right" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-right"/></svg></button></div>
+      </div>
+    </section>
+
+    <!-- ============ Évasion + services ============ -->
+    <section class="extras container" id="services" aria-label="Services et réservation">
+      <div class="escape"><div class="escape__overlay"></div><div class="escape__content"><h2>Prêt pour l’évasion ?</h2><p>Réservez dès maintenant et profitez<br>d’un séjour unique à Marolaka Eiffel.</p><a href="#reservation" class="button button--light">Réserver maintenant</a></div></div>
+      <div class="services"><div class="service"><svg class="icon icon--coffee" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-coffee"/></svg><p>Petit déjeuner<br>inclus</p></div><div class="service"><svg class="icon icon--wifi" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wifi"/></svg><p>Wi-Fi<br>gratuit</p></div><div class="service"><svg class="icon icon--snowflake" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-snowflake"/></svg><p>Climatisation<br>dans toutes<br>les chambres</p></div><div class="service"><svg class="icon icon--car-front" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-car-front"/></svg><p>Parking<br>sécurisé</p></div></div>
+    </section>
+  </main>
+
+  <!-- ============ Pied de page ============ -->
+  <footer class="footer" id="contact">
+    <div class="footer__inner container">
+      <div class="footer__contact"><a class="brand brand--footer" href="#accueil" aria-label="Marolaka Eiffel Majunga, retour en haut"><svg class="brand__tower" aria-hidden="true"><use href="#eiffel"/></svg><span class="brand__text">MAROLAKA<br>EIFFEL<span class="brand__city">MAJUNGA</span></span></a><a href="tel:+261329164712" data-contact="phone"><svg class="icon icon--phone" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg>+261 32 91 647 12</a><a href="mailto:contact@marolakaeiffel.com" data-contact="email"><svg class="icon icon--mail" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>contact@marolakaeiffel.com</a><p><svg class="icon icon--map-pin" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-map-pin"/></svg>Analakely, Centre-ville, Majunga</p></div>
+      <div class="footer__links"><h2>Liens rapides</h2><div class="footer__link-columns"><div><a href="#accueil">Accueil</a><a href="#chambres">Chambres</a><a href="#reservation">Réservation</a><a href="#histoire">À propos</a></div><div><a href="#services">Services</a><a href="#histoire" data-page="blog">Blog</a><a href="#contact">Contact</a></div></div></div>
+      <div class="footer__social"><h2>Nous suivre</h2><div class="social-links"><a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="social-links__facebook">f</a><a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg class="icon icon--instagram" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-instagram"/></svg></a><a href="https://wa.me/261329164712" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><svg class="icon icon--message-circle" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-message-circle"/></svg></a></div></div>
+      <div class="footer__location"><h2>Nous trouver</h2><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Marolaka+Eiffel+Majunga" target="_blank" rel="noopener noreferrer" aria-label="Trouver Marolaka Eiffel Majunga sur Google Maps"><svg class="map__drawing" viewBox="0 0 340 150" aria-hidden="true"><rect width="340" height="150" fill="#e8e9e6"/><path d="M0 130 Q60 110 90 150H0Z" fill="#b9d5dd"/><g stroke="#fff" stroke-width="7" fill="none"><path d="M-10 50 350 120M0 0l340 65M20 150 125-10M90 160 200-10M170 160 270-10M260 160 350 10M-10 105 350 8"/></g><g stroke="#d1c5ad" stroke-width="2" fill="none"><path d="M40 0 160 150M0 75 340 30M210 0l90 150"/></g><g fill="#ced9c5"><path d="m272 67 24-6 13 17-26 9Z"/><path d="m40 110 18-16 18 12-21 20Z"/></g><circle cx="237" cy="77" r="5" fill="#d4a36b"/><text x="245" y="80" font-size="7" fill="#9b8b6d">Majunga</text></svg><div class="map__label"><strong>Marolaka Eiffel Majunga</strong><span>Analakely, Majunga</span><span class="map__link">Voir sur Google Maps</span></div><span class="map__zoom" aria-hidden="true">+<br><span>−</span></span><span class="map__google" aria-hidden="true"><b>G</b>oogle</span></a></div>
+    </div>
+  </footer>
+
+  <!-- ============ Fenêtre de demande de réservation ============ -->
+  <dialog class="reservation-dialog" id="reservation-dialog" aria-labelledby="dialog-title"><button class="reservation-dialog__close" type="button" aria-label="Fermer"><svg class="icon icon--x" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-x"/></svg></button><p class="eyebrow eyebrow--gold">Votre séjour à Majunga</p><h2 id="dialog-title">Une évasion vous attend.</h2><p id="reservation-summary"></p><p>Contactez notre équipe pour confirmer les disponibilités et réserver votre séjour.</p><a class="button" id="reservation-email" href="mailto:contact@marolakaeiffel.com">Demander une réservation</a><a class="reservation-dialog__phone" id="reservation-phone" href="tel:+261329164712">+261 32 91 647 12</a></dialog>
+</body>
+</html>
